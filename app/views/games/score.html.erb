@@ -1,0 +1,11 @@
+<h1>Result</h1>
+
+<% if @validletters && @validword %>
+<p>Congratulations! <%= @input %> is a valid English word!</p>
+<% elsif @validletters %>
+<p>Sorry but <%= @input %> does not seem to be a valid English word...</p>
+<% else %>
+<p>Sorry but the <strong><%= @input %></strong> can't be built out of <%= @letters %></p>
+<% end %>
+
+<%= link_to "Play again", new_path %>
